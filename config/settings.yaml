@@ -1,0 +1,89 @@
+base_dir: "C:/LSC/contract_sorter"
+input_dir: "C:/LSC/contract_sorter/input"
+output_dir: "C:/LSC/contract_sorter/output"
+cache_dir: "C:/LSC/contract_sorter/cache"
+log_dir: "C:/LSC/contract_sorter/logs"
+mapping_file: "C:/LSC/contract_sorter/config/group_company_mapping_clean.xlsx"
+
+ocr:
+  engine: gpt   # paddleocr = local (free), gpt = GPT-4o-mini Vision (paid)
+  lang: ch
+  use_angle_cls: true
+  dpi: 200
+  max_workers: 2
+
+ai:
+  enabled: true
+  provider: openai
+  model: gpt-4o
+  timeout_sec: 60
+  max_retries: 3
+  tpm_budget: 80000
+
+rules:
+  amount_ranges:
+    annual_maintenance_fee: [500, 1000000]
+    tax_included_amount: [500, 1000000]
+    tax_excluded_amount: [500, 1000000]
+    contract_total_amount: [500, 1000000]
+
+  doc_type_keywords:
+    CONTRACT:
+      - "合同"
+      - "协议"
+      - "agreement"
+      - "contract"
+      - "服务合同"
+      - "维护合同"
+      - "维保合同"
+      - "项目合同"
+      - "技术服务"
+    PURCHASE_ORDER:
+      - "采购合同"
+      - "采购订单"
+      - "购买合同"
+      - "purchase order"
+      - "PO"
+      - "订购单"
+      - "采购单"
+    QUOTE:
+      - "报价单"
+      - "报价书"
+      - "quotation"
+      - "quote"
+      - "价格清单"
+    PROPOSAL:
+      - "项目建议书"
+      - "方案"
+      - "proposal"
+      - "建议书"
+      - "解决方案"
+    SRF:
+      - "srf"
+      - "服务需求表"
+      - "service request"
+      - "request form"
+      - "服务申请"
+      - "需求表"
+    PAYMENT_NOTICE:
+      - "付款通知"
+      - "催款"
+      - "收款通知"
+      - "payment notice"
+      - "invoice"
+      - "发票"
+    ATTACHMENT:
+      - "附件"
+      - "attachment"
+      - "appendix"
+      - "附录"
+      - "补充协议"
+    OTHER:
+      - "声明"
+      - "工作报告"
+      - "交付报告"
+      - "承诺书"
+      - "实施声明"
+      - "维护价格"
+      - "delivery report"
+      - "work report"

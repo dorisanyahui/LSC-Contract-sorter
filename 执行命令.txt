@@ -1,0 +1,3 @@
+cd C:\LSC\contract_sorter
+.venv\Scripts\Activate.ps1
+python -m src.main run

@@ -1,0 +1,48 @@
+from enum import Enum
+
+
+class DocType(str, Enum):
+    CONTRACT = "CONTRACT"
+    PURCHASE_ORDER = "PURCHASE_ORDER"
+    QUOTE = "QUOTE"
+    PROPOSAL = "PROPOSAL"
+    SRF = "SRF"
+    PAYMENT_NOTICE = "PAYMENT_NOTICE"
+    ATTACHMENT = "ATTACHMENT"
+    OTHER = "OTHER"
+    UNKNOWN = "UNKNOWN"
+
+
+class PacketType(str, Enum):
+    TITLE_PAGE = "TITLE_PAGE"
+    TERMS_PAGE = "TERMS_PAGE"
+    SIGNATURE_PAGE = "SIGNATURE_PAGE"
+    AMOUNT_PAGE = "AMOUNT_PAGE"
+    TABLE_PAGE = "TABLE_PAGE"
+    ACCEPTANCE_PAGE = "ACCEPTANCE_PAGE"
+    APPENDIX_PAGE = "APPENDIX_PAGE"
+    UNKNOWN = "UNKNOWN"
+
+
+class FieldSource(str, Enum):
+    PDF_TEXT = "PDF_TEXT"
+    OCR = "OCR"
+    RULE = "RULE"
+    AI = "AI"
+
+
+class PageType(str, Enum):
+    TITLE_PAGE = "TITLE_PAGE"
+    TERMS_PAGE = "TERMS_PAGE"
+    SIGNATURE_PAGE = "SIGNATURE_PAGE"
+    AMOUNT_PAGE = "AMOUNT_PAGE"
+    TABLE_PAGE = "TABLE_PAGE"
+    ACCEPTANCE_PAGE = "ACCEPTANCE_PAGE"
+    APPENDIX_PAGE = "APPENDIX_PAGE"
+    UNKNOWN = "UNKNOWN"
+
+
+class Currency(str, Enum):
+    CNY = "CNY"
+    USD = "USD"
+    EUR = "EUR"

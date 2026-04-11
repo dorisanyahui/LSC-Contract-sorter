@@ -1,0 +1,43 @@
+# ─── Secrets (never commit) ───────────────────────────────
+.env
+.env.*
+*.key
+
+# ─── Python ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# ─── Data directories (scanned PDFs, generated output) ────
+input/
+output/
+cache/
+logs/
+review/
+派克集团/
+
+# ─── Large data files ─────────────────────────────────────
+*.zip
+*.xls
+*.xlsx
+!config/**/*.xlsx
+*.csv
+!config/**/*.csv
+
+# ─── Temp / debug artifacts ──────────────────────────────
+tmp_*.txt
+tmp_*.json
+debug_*.jpg
+debug_*.png
+*.log
+
+# ─── Claude Code local state ─────────────────────────────
+.claude/scheduled_tasks.lock
+.claude/*.lock
+
+# ─── OS ──────────────────────────────────────────────────
+Thumbs.db
+.DS_Store
