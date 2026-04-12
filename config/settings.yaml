@@ -9,13 +9,13 @@ ocr:
   engine: gpt   # paddleocr = local (free), gpt = GPT-4o-mini Vision (paid)
   lang: ch
   use_angle_cls: true
-  dpi: 200
+  dpi: 120
   max_workers: 2
 
 ai:
   enabled: true
   provider: openai
-  model: gpt-4o
+  model: gpt-4o-mini
   timeout_sec: 60
   max_retries: 3
   tpm_budget: 80000
